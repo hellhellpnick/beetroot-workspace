@@ -6,6 +6,27 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <h1>Git</h1>
+  <ol>
+    <li>Створити репозиторій "beetroot" на <a href="https://github.com/">github</a> c домашніми роботами</li>
+    <li>В корні репозиторія створити файл index.html</li>
+    <li>Опублікувати репозиторій <pre>
+      git init
+      git add .
+      git commit -m 'first commit'
+      git remote add origin https://github.com:*your accout github*/*your repository name*.git
+      git push -u origin master
+    </pre></li>
+    <li>В репозиторії "beetroot" створити гілку "gh-pages" <pre>
+      git checkout -b gh-pages
+    </pre></li>
+    <li>Опублікувати гілку <pre>
+      git push -u origin gh-pages
+    </pre></li>
+    <li>Не забути переключитися назад на гілку мастер <pre>
+      git checkout master
+    </pre></li>
+    <li>Створити новий репозиторій з іменем *your account name*.github.io в який помістити свож резюме (аналогічно кроку 3)</li>
+  </ol>
 </body>
 </html>
