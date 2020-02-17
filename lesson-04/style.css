@@ -50,7 +50,7 @@ body {
 }
 .link-navigation {
   background-color: #7D0909;
-  flex: 0 0 200px;
+  flex: 0 0 220px;
 }
 .link-navigation__list {
   list-style: none;
@@ -70,7 +70,7 @@ body {
   margin-bottom: 24px;
 }
 .aside {
-  flex: 0 0 180px;
+  flex: 0 0 200px;
   background-color: #E3DDDD;
 }
 .aside__title {
