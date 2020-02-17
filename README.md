@@ -1,4 +1,4 @@
-# Beetroot Fornt-end
+# Beetroot Front-end
 
 * [Lesson 1](https://a1exalexander.github.io/beetroot-workspace/lesson-01)
 * Lesson 2
