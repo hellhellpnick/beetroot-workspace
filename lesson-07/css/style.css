@@ -1,0 +1,10 @@
+@import url('weather-icons-wind.css');
+@import url('weather-icons.css');
+
+h1 {
+  width: 500px;
+  border: 1px solid red;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

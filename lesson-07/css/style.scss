@@ -1,0 +1,19 @@
+$danger: red;
+
+@mixin flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+.list {
+  list-style: none;
+  @include flex(column);
+  // display: flex;
+  // flex-direction: column;
+  &__item {
+    color: $danger;
+  }
+}
+// .list__item {
+//   color: red;
+// }
