@@ -76,12 +76,15 @@ body {
 .item__content {
   color: var(--white);
   transition: all 0.2s ease-out;
+  display: flex;
+  align-items: center;
 }
 .item__name {
   font-size: 22px;
 }
 .item__description {
   font-size: 14px;
+  transform: translateY(1px);
 }
 .item__description:after {
   content: ')';
