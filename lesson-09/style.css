@@ -1,0 +1,15 @@
+@import url('fonts/stylesheet.css');
+
+h1 {
+  font-family: proxima;
+}
+
+div {
+  background-color: red;
+}
+span {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.507);
+  color: black;
+  max-width: 120px;
+}
