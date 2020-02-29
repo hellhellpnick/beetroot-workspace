@@ -1,0 +1,12 @@
+$border-color: yellow;
+$text-color: blue;
+
+h1 {
+  color: darkcyan;
+}
+.list {
+  border: 1px solid $border-color;
+  &__item {
+    color: $text-color;
+  }
+}

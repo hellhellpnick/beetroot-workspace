@@ -1,0 +1,40 @@
+.card {
+  height: 310px;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  &__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__date-box {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    @extend %visible-z;
+  }
+  &__content {
+    @extend %visible-z;
+    padding: 20px;
+    background-image: $content-gradient;
+  }
+  &__title {
+    font-size: $card-title-fs;
+    color: $white;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  &__info {
+    font-size: $card-info-fs;
+    color: $white;
+    font-weight: 300;
+  }
+}

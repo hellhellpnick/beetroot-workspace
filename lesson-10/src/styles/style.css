@@ -1,0 +1,12 @@
+h1 {
+  color: darkcyan;
+}
+
+.list {
+  border: 1px solid yellow;
+}
+.list__item {
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
