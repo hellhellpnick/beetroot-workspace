@@ -1,0 +1,4 @@
+@mixin cover-img($x: 50%, $y: 50%) {
+  @extend %cover-img;
+  object-position: $x $y;
+}

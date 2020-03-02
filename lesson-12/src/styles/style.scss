@@ -1,0 +1,72 @@
+@import './inharitance';
+@import './mixins';
+
+header {
+  min-height: 50vh;
+  position: relative;
+  padding: 40px;
+  // background: #0099F7;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to right, black, transparent);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, black, transparent); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+img {
+  @include cover-img(50%, 70%);
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+}
+
+form {
+  background-color: #111A28;
+  padding: 24px;
+  height: 200px;
+}
+
+$style: radio;
+
+.#{$style} {
+  position: relative;
+  cursor: pointer;
+  margin-right: 12px;
+  &--black .#{$style}__dot {
+    background-color: #1F273F;
+  }
+  &--white {
+    .#{$style}__input:checked + .#{$style}__dot {
+      border-color: red;
+    }
+    .#{$style}__dot {
+      background-color: white;
+    }
+  }
+  &--red .#{$style}__dot {
+    background-color: #E73233;
+  }
+  &--blue .#{$style}__dot {
+    background-color: #29E0E7;
+  }
+  &__input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    &:checked + .#{$style}__dot {
+      transform: scale(1.2);
+      border-color: white;
+    }
+  }
+  &__dot {
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+}
