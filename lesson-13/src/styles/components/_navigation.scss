@@ -1,0 +1,28 @@
+.navigation {
+  height: 90px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.397);
+  @include flex(space-between, center);
+  top: 0;
+  left: 0;
+  right: 0;
+  @extend %container;
+  &__list {
+    list-style: none;
+    @include flex;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+  &__link {
+    font-size: $H1;
+    color: $text-main-color;
+    transition: all 0.2s ease;
+    border-top: 2px solid transparent;
+    &:hover {
+      border-color: $main-color;
+    }
+  }
+}
