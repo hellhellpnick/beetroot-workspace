@@ -8,6 +8,7 @@
   text-transform: uppercase;
   @include flex(center, center);
   width: 100%;
+  text-align: center;
   @media screen and (min-width: $screen-tablet) {
     width: fit-content;
   }

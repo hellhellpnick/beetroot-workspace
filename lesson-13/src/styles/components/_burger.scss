@@ -1,7 +1,7 @@
 $style: burger;
 .#{$style} {
   position: relative;
-  z-index: 10;
+  z-index: 11;
   display: block;
   &__input {
     opacity: 0;
