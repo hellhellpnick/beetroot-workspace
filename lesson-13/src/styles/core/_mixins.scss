@@ -16,10 +16,8 @@
 }
 
 @mixin text($size, $weight: 400, $color: $text-main-color) {
-  font: {
-    size: calcRem($size);
-    weight: $weight;
-  }
+  font-size: $size;
+  font-weight: $weight;
   color: $color;
   @content;
 }

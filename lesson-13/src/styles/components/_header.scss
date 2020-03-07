@@ -1,5 +1,36 @@
 .header {
+  background-image: url(../images/header.png);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
   &__container {
     min-height: 100vh;
+    @include flex(center, center);
+    @media screen and (min-width: $screen-tablet) {
+      justify-content: flex-start;
+    }
+  }
+  &__content {
+    @include flex(center, center, column);
+    @media screen and (min-width: $screen-tablet) {
+      display: block;
+    }
+  }
+  &__title {
+    @include text($H800, 800);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  &__text {
+    @include text($H200, 300);
+    margin-bottom: 20px;
+    max-width: 374px;
+    line-height: 1.5;
+  }
+  &__scroll {
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

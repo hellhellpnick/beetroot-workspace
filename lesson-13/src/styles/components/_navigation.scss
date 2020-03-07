@@ -4,27 +4,47 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 11;
   &__container {
     height: 110px;
     @include flex(space-between, center);
   }
   &__list {
     list-style: none;
-    @include flex;
+    @include flex(flex-start,  center, column);
+    position: fixed;
+    top: 110px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 32px 24px;
+    z-index: 10;
+    @media screen and (min-width: $screen-tablet) {
+      flex-direction: row;
+      position: static;
+      padding: 0;
+    }
   }
   &__item {
     &:not(:last-child) {
-      margin-right: 32px;
+      margin-bottom: 32px;
+      @media screen and (min-width: $screen-tablet) {
+        margin-bottom: 0;
+        margin-right: 32px;
+      }
     }
+    
   }
   &__link {
     @include text($H100, 700,);
-    padding-top: 2px;
     text-transform: uppercase;
-    transition: all 0.2s ease;
-    border-top: 2px solid transparent;
-    &:hover {
-      border-color: $header-btn-color;
+    @media screen and (min-width: $screen-tablet) {
+      padding-top: 2px;
+      border-top: 2px solid transparent;
+      transition: all 0.2s ease;
+      &:hover {
+        border-color: $header-btn-color;
+      }
     }
   }
 }
