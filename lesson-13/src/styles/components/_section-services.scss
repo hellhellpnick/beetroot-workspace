@@ -11,15 +11,12 @@
   &__picture-side {
     @include flex(center, center);
     position: relative;
-    padding-top: 120%;
     width: 100%;
+    @include padding-hack(100%);
     @media screen and (min-width: $screen-desktop) {
       width: 50%;
-      padding-top: 57%;
+      padding-bottom: 57%;
     }
-  }
-  &__image {
-    @extend %image-absolute;
   }
   &__content-side {
     width: 100%;

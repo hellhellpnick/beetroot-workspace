@@ -11,11 +11,11 @@
   &__picture-side {
     @include flex;
     position: relative;
-    padding-top: 100%;
+    @include padding-hack(100%);
     width: 100%;
     @media screen and (min-width: $screen-desktop) {
       width: 50%;
-      padding-top: 50%;
+      padding-bottom: 50%;
     }
   }
   &__content-side {
@@ -28,7 +28,6 @@
     }
   }
   &__image {
-    @extend %image-absolute;
     transition: all 0.4s ease;
     @media screen and (min-width: $screen-desktop) {
       &:hover {
