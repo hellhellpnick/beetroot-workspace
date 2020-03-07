@@ -1,28 +1,30 @@
 .navigation {
-  height: 90px;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.397);
-  @include flex(space-between, center);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9), transparent);
   top: 0;
   left: 0;
   right: 0;
-  @extend %container;
+  &__container {
+    height: 110px;
+    @include flex(space-between, center);
+  }
   &__list {
     list-style: none;
     @include flex;
   }
   &__item {
     &:not(:last-child) {
-      margin-right: 22px;
+      margin-right: 32px;
     }
   }
   &__link {
-    font-size: $H1;
-    color: $text-main-color;
+    @include text($H100, 700,);
+    padding-top: 2px;
+    text-transform: uppercase;
     transition: all 0.2s ease;
     border-top: 2px solid transparent;
     &:hover {
-      border-color: $main-color;
+      border-color: $header-btn-color;
     }
   }
 }
