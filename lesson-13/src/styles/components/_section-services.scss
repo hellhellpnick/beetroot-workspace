@@ -1,5 +1,6 @@
 .section-services {
   background-color: $service-bg-color;
+  @extend %section;
   &__container {
     @include flex(flex-start, stretch, column);
     padding-top: 70px;
@@ -15,7 +16,7 @@
     @include padding-hack(100%);
     @media screen and (min-width: $screen-desktop) {
       width: 50%;
-      padding-bottom: 57%;
+      padding-bottom: 46%;
     }
   }
   &__content-side {

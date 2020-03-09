@@ -1,5 +1,6 @@
 .section-about {
   background-color: $about-bg-color;
+  @extend %section;
   &__container {
     @include flex(flex-start, stretch, column);
     padding-top: 70px;

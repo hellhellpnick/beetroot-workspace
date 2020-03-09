@@ -6,14 +6,14 @@
   right: 0;
   z-index: 11;
   &__container {
-    height: 110px;
+    height: 100px;
     @include flex(space-between, center);
   }
   &__list {
     list-style: none;
     @include flex(flex-start,  center, column);
     position: fixed;
-    top: 110px;
+    top: 100px;
     right: 0;
     left: 0;
     bottom: 0;
