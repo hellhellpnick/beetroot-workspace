@@ -22,7 +22,7 @@
   @content;
 }
 
-@mixin padding-hack($padding: 50%) {
+@mixin padding-hack($padding: 50%, $size: contain) {
   position: relative;
   height: 0;
   padding-bottom: $padding;
@@ -34,6 +34,17 @@
     right: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: $size;
   }
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin svg($size: 32px, $fill: black) {
+  width: $size;
+  height: $size;
+  fill: $fill;
 }

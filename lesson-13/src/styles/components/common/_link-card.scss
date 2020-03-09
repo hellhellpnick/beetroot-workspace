@@ -1,8 +1,13 @@
-.link-card {
+$style: link-card;
+.#{$style} {
   width: 100%;
   min-height: 100px;
+  transition: all 0.2s ease;
   @media screen and (min-width: $screen-desktop) {
-    width: 400px;   
+    width: 400px;
+    &:hover {
+      box-shadow: 0 2px 5px 0px rgba(black, 0.4);
+    }
   }
   background-color: $white;
   @include flex;
@@ -13,13 +18,14 @@
   }
   &__text {
     @include text($H300, 700);
+    text-align: center;
+    text-transform: capitalize;
   }
   &__icon-wrapper {
     width: 100px;
     @include flex(center, center);
   }
   &__icon {
-    width: 60px;
-    height: 60px;
+    @include svg(60px, $dark);
   }
 }
