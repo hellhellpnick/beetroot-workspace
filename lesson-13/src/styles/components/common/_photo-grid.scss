@@ -36,6 +36,7 @@ $style: photo-grid;
     @include padding-hack(71%, cover);
     background-color: $grey;
     margin-bottom: 24px;
+    box-shadow: 0 2px 5px 0 (black, 0.5);
     &--marginless {
       margin-bottom: 0;
     }
