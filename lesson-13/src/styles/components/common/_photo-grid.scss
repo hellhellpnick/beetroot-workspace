@@ -46,7 +46,7 @@ $style: photo-grid;
         padding-bottom: 46.6%;
       }
       &--small {
-        padding-bottom: 67.4%;
+        padding-bottom: calc(72.3% - 15px);
       }
       &--medium {
         padding-bottom: 34%;
