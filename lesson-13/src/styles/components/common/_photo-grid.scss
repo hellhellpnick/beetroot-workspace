@@ -35,8 +35,8 @@ $style: photo-grid;
   }
   &__image-wrapper {
     position: relative;
-    @include padding-hack(71%, cover);
     background-color: $grey;
+    @include padding-hack(71%, cover);
     margin-bottom: 24px;
     box-shadow: 0 2px 5px 0 (black, 0.5);
     &--marginless {
@@ -52,11 +52,8 @@ $style: photo-grid;
         padding-bottom: 0;
       }
       &--medium {
-        padding-bottom: 34%;
+        padding-bottom: 34.3%;
       }
     }
-  }
-  &__image {
-    object-position: center;
   }
 }
