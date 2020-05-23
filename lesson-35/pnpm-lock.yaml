@@ -1,0 +1,22 @@
+dependencies:
+  clusterize.js: 0.18.1
+  parcel-plugin-clean-dist: 0.0.6
+  uikit: 3.4.6
+lockfileVersion: 5.1
+packages:
+  /clusterize.js/0.18.1:
+    dev: false
+    resolution:
+      integrity: sha512-UsLhW2lG3TaTnE8LI7ninvovua3FLrlsbksb9uzx0fVzzV2WFScO5FU/4yFwdM8RW8iuYVWFraBpDjsosReFlg==
+  /parcel-plugin-clean-dist/0.0.6:
+    dev: false
+    resolution:
+      integrity: sha512-zzPY/ORCzkV+V7nfyYlONLrBithrx6orJjepdBoqqb9myeV9zQZUoBY41i3QkSSnQX7ilGmWDALX2XlxC6z7Fw==
+  /uikit/3.4.6:
+    dev: false
+    resolution:
+      integrity: sha512-Se8DXGJ69NCxm8AQTok6I9aXxvklaBsdkr3REfbUorxeIQA6g96sPvzHCXrubqknoqEhH6npD14xtzxJGCvS8A==
+specifiers:
+  clusterize.js: ^0.18.1
+  parcel-plugin-clean-dist: ^0.0.6
+  uikit: ^3.4.6

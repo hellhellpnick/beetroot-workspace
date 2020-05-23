@@ -1,0 +1,43 @@
+@base_url = https://www.potterapi.com/v1
+@key = $2a$10$XmJbGUGcVZTGD9IenGYf9ek.8xtdZ2TG4RPSv9GT5uVYheQ572fbe
+
+GET {{base_url}}
+
+###
+
+GET {{base_url}}/sortingHat
+
+###
+
+GET {{base_url}}/characters?key={{key}}
+
+###
+
+GET {{base_url}}/characters/5a107fc9e0686c0021283b20/?key={{key}}
+
+###
+
+GET {{base_url}}/houses?key={{key}}
+
+###
+
+GET {{base_url}}/spells?key={{key}}
+
+###
+POST http://localhost:9000/api/login
+Content-Type: application/json
+
+{
+  "email": "example@example.com",
+  "password": "test1234"
+}
+
+###
+
+GET http://localhost:9000/api/videos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJuYW1lIjoiTWFiZWwgUnV0aGVyZm9yZCIsImlkIjoxMSwiaWF0IjoxNTkwMjI4MjA2fQ.gU_Od5UuwdePH7FpC3ZYi7MqLZhUKXmqUeXz_eaZdBg
+
+###
+
+GET http://localhost:9000/api/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJuYW1lIjoiTWFiZWwgUnV0aGVyZm9yZCIsImlkIjoxMSwiaWF0IjoxNTkwMjI4MjA2fQ.gU_Od5UuwdePH7FpC3ZYi7MqLZhUKXmqUeXz_eaZdBg

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <title>Harry Potter</title>
+  </head>
+  <body>
+    <div class="hat" id="hat">
+      <h1 class="uk-heading-line uk-text-center hat__title">
+        <span id="answer">Answer...</span>
+      </h1>
+      <button
+        id="ask"
+        class="uk-button uk-button-primary uk-button-large hat__button"
+      >
+        <div uk-spinner class="hat__spinner"></div>
+        <span class="hat__btn-text">Ask the Hat</span>
+      </button>
+    </div>
+    <div id="scrollArea" class="clusterize-scroll">
+      <div id="contentArea" class="clusterize-content characters">
+        <span class="clusterize-no-data" uk-spinner="ratio: 4.5"></span>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
