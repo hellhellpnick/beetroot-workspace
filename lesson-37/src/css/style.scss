@@ -1,0 +1,9 @@
+@import './libs/uikit';
+@import './core/mixins';
+
+@import './components/home';
+@import './components/login';
+
+ul, ol {
+  list-style: none;
+}

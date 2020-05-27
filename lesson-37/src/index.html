@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div id="home" class="uk-container uk-padding-large home">
+      <div class="uk-card uk-card-default">
+        <div class="uk-card-header">
+          <div class="uk-grid-small uk-flex-middle" data-uk-grid>
+            <div class="uk-width-auto">
+              <img
+                id="avatar"
+                class="uk-border-circle home__avatar"
+                width="40"
+                height="40"
+                alt=""
+                src="/"
+              />
+            </div>
+            <div class="uk-width-expand">
+              <h3 id="name" class="uk-card-title uk-margin-remove-bottom"></h3>
+              <p class="uk-text-meta uk-margin-remove-top">
+                <span id="date"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <ul id="list" class="uk-card-body"></ul>
+        <div class="uk-card-footer">
+          <button id='logout' class="uk-button uk-button-text">Logout</button>
+        </div>
+      </div>
+    </div>
+    <script src="/js/index.js"></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>

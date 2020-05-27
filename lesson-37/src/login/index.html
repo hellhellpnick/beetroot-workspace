@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login uk-container uk-flex-center uk-padding-large">
+      <div class="uk-card uk-card-default uk-card-body login__card">
+        <h3 class="uk-card-title">Login</h3>
+        <form name="login" id="login">
+          <div class="uk-margin">
+            <label class="uk-form-label" for="email">Email</label>
+            <div class="uk-form-controls">
+              <input
+                class="uk-input"
+                id="email"
+                name="email"
+                type="email"
+              />
+            </div>
+          </div>
+          <div class="uk-margin">
+            <label class="uk-form-label" for="password"
+              >Password</label
+            >
+            <div class="uk-form-controls">
+              <input
+                class="uk-input"
+                id="password"
+                name="password"
+                type="password"
+              />
+            </div>
+          </div>
+          <button name="submit" class="uk-button uk-button-primary">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="/js/index.js"></script>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

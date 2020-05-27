@@ -1,0 +1,17 @@
+{
+  "name": "lesson-36",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./index.html --open --no-cache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^2.6.1",
+    "google-maps": "^4.2.3",
+    "leaflet": "^1.6.0"
+  }
+}

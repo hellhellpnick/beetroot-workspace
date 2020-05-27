@@ -1,0 +1,15 @@
+$style: home;
+
+.#{$style} {
+  visibility: hidden;
+  &.active {
+    visibility: visible;
+  }
+  &__avatar {
+    display: block;
+    background-color: lightgray;
+    @include size(40px, true);
+    object-fit: cover;
+    object-position: center;
+  }
+}

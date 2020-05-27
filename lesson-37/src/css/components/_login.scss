@@ -1,0 +1,11 @@
+$style: login;
+.#{$style} {
+  min-height: 100vh;
+  @include flex-col(center, center);
+  &__card {
+    width: 100%;
+    @include media($screen-tablet) {
+      width: 500px;
+    }
+  }
+}
