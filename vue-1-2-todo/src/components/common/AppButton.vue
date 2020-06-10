@@ -43,5 +43,8 @@ $style: button;
   &.success {
     background-color: #36b37e;
   }
+  &.warning {
+    background-color: #FFAB00;
+  }
 }
 </style>

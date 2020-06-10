@@ -2,12 +2,17 @@
   <li class="todo-item">
     <div class="todo-item__row">
       <span class="todo-item__idx">{{ idx + 1 }}</span>
-      <span class="todo-item__name">{{ todo.text }}</span>
+      <a class="todo-item__name" :href="`#${todo.id}`" @click="onSelect">{{ todo.text }}</a>
       <span class="todo-item__status" :style="{ backgroundColor: getStatusColor }">{{ getStatus }}</span>
     </div>
     <div class="todo-item__buttons">
-      <app-button @click='onTodoRemove' size="small" type="danger" class="todo-item__action">Remove</app-button>
-      <app-button @click='onTodoDone' size="small" type="success" class="todo-item__action">Done</app-button>
+      <app-button @click="onTodoRemove" size="small" type="danger" class="todo-item__action">Remove</app-button>
+      <app-button
+        @click="onTodoDone"
+        size="small"
+        :type="todo.done ? 'warning' : 'success'"
+        class="todo-item__action"
+      >{{ getActionName }}</app-button>
     </div>
   </li>
 </template>
@@ -31,14 +36,20 @@ export default {
     },
     getStatusColor() {
       return this?.todo?.done ? "#36B37E" : "#FFAB00";
+    },
+    getActionName() {
+      return this?.todo?.done ? "Todo" : "Done";
     }
   },
   methods: {
     onTodoDone() {
-      this.$emit('done', this.todo?.id);
+      this.$emit("done", this.todo?.id);
     },
     onTodoRemove() {
-      this.$emit('remove', this.todo?.id);
+      this.$emit("remove", this.todo?.id);
+    },
+    onSelect() {
+      this.$emit("select", this.todo?.id);
     }
   }
 };
@@ -46,7 +57,8 @@ export default {
 
 <style lang="scss">
 .todo-item {
-  display: flex;
+  width: 100%;
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;

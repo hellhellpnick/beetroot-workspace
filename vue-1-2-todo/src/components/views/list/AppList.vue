@@ -1,14 +1,16 @@
 <template>
-  <ol class="list">
+  <transition-group name="list-flip" tag="ol" class="list">
     <app-todo-item
       v-for="(item, idx) in todos"
       :key="item.id"
+      class="list-flip-item"
       :idx="idx"
       :todo="item"
       @done="onTodoDone"
       @remove="onTodoRemove"
+      @select="onSelect"
     />
-  </ol>
+  </transition-group>
 </template>
 
 <script>
@@ -29,10 +31,13 @@ export default {
   },
   methods: {
     onTodoDone(id) {
-      this.$emit('done', id);
+      this.$emit("done", id);
     },
     onTodoRemove(id) {
-      this.$emit('remove', id);
+      this.$emit("remove", id);
+    },
+    onSelect(id) {
+      this.$emit("select", id);
     }
   }
 };
@@ -43,5 +48,18 @@ export default {
   list-style-position: inside;
   padding: 24px;
   list-style: none;
+}
+.list-flip-item {
+  transition: all 0.2s;
+  display: inline-flex;
+  margin-right: 10px;
+}
+.list-flip-enter,
+.list-flip-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.list-flip-leave-active {
+  position: absolute;
 }
 </style>
