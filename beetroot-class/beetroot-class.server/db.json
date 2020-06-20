@@ -1,0 +1,106 @@
+{
+  "members": [
+    {
+      "name": "Артем Мазур",
+      "id": "artem-mazur",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/67815875_121275362522788_7135555758157987840_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=2_EvYpKjFT8AX8BUHPB&_nc_ht=scontent.fhrk6-1.fna&oh=5afa314435f1b808c2d0f66fd9c8d52c&oe=5F1240A1",
+      "github": "https://github.com/mazurartem",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Арутюн Матевосян ",
+      "id": "arutyun-matevosian",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/14322707_1196570110416243_4945016669866066781_n.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=6BZYmOEUu6kAX_XuJln&_nc_ht=scontent.fhrk6-1.fna&oh=4fe59ee6dd98b06f008c8d8303e455d9&oe=5F11D4B1",
+      "github": "https://github.com/MatevosianArutiun",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Богдан Удовенко",
+      "id": "bogdan-udovenko",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/19642276_1701953499867497_5429287597585692654_n.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=-NANPI47BTMAX8YlNmx&_nc_ht=scontent.fhrk6-1.fna&oh=c4b4642b55775e1cbb8efca3519a5fde&oe=5F151A81",
+      "github": "https://github.com/Budvenk",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Володимир Назаренко",
+      "id": "volodymyr-nazarenko",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/86497110_204335730713565_8264862355750387712_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=EN0J15Nd-QgAX8t3vij&_nc_ht=scontent.fhrk6-1.fna&oh=6e39f72334cfd0378d32183a07476ac8&oe=5F11DB08",
+      "github": "https://github.com/Volodimir1",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Євгеній Брижко",
+      "id": "evgeniy-bryzhko",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/70677435_686307571854739_2079051697849630720_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=l_lDblZCW70AX--VsRH&_nc_ht=scontent.fhrk6-1.fna&oh=65d561f1488e1168238c5ad9768f3ffc&oe=5F1457C9",
+      "github": "https://github.com/evgeniybryzh",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Ілля Будаєв",
+      "id": "ilya-budaev",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/90519556_2605962126310609_5920851393811316736_o.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=lODoMwRijIIAX89lj_o&_nc_ht=scontent.fhrk6-1.fna&oh=5d310b17c29ca47a963d1ca69703e3d5&oe=5F123111",
+      "github": "https://github.com/ilycher",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Микита Удовицький",
+      "id": "mykita-udovitskiy",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/18555945_104999173416597_6164431913316074389_n.jpg?_nc_cat=103&_nc_sid=174925&_nc_ohc=cBZriOUA2z8AX8q-1LO&_nc_ht=scontent.fhrk6-1.fna&oh=50e19b30d2bd8d5709c80c20659dbcf7&oe=5F148313",
+      "github": "https://github.com/NikitaUdav",
+      "comments": [],
+      "projects": [
+        {
+          "name": "BHROMAON (Exam 1)",
+          "image": "https://i.ibb.co/vPgrHQr/Fire-Shot-Capture-006-Exam-nikitaudav-github-io.png",
+          "link": "https://nikitaudav.github.io/Exam_HTML/"
+        }
+      ]
+    },
+    {
+      "name": "Наталія Демянова",
+      "id": "nataliya-demianova",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/51024276_818728315136002_7934500716951896064_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=Ld6rHZxSc74AX_ldIlH&_nc_ht=scontent.fhrk6-1.fna&oh=f63226fbf8387a2dd971d3389be1cc60&oe=5F14098A",
+      "github": "https://github.com/NatalyaDemiyanova",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Олександр Водоріз",
+      "id": "oleksandr-vodoriz",
+      "image": "https://scontent.fdnk1-2.fna.fbcdn.net/v/t1.0-0/c100.0.206.206a/p206x206/104587135_2309076262734800_433423695232416193_o.jpg?_nc_cat=110&_nc_sid=da31f3&_nc_ohc=Xrk2HEd7qDQAX8PzKKg&_nc_ht=scontent.fdnk1-2.fna&oh=abddd590775d173c89bc2cd89a77fc3f&oe=5F134316",
+      "github": "https://github.com/hellhellpnick",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Олена Валікова",
+      "id": "olena-valikova",
+      "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t31.0-8/12030487_1653144248266808_2691109936579415474_o.jpg?_nc_cat=102&_nc_sid=09cbfe&_nc_ohc=ppicwzi4Q6AAX-5szWp&_nc_ht=scontent.fhrk6-1.fna&oh=adae4a4f80e529a0f61980a9bf5145e0&oe=5F13D01D",
+      "github": "https://github.com/ElenaValikova",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Павло Левченко",
+      "id": "pavlo-levchenko",
+      "image": "https://kpweby.github.io/beetroot/l1_Front-End/EN/IMG_20170912_174346.jpg",
+      "github": "https://github.com/kpweby",
+      "comments": [],
+      "projects": []
+    },
+    {
+      "name": "Юрій Лоб",
+      "id": "yuriy-lob",
+      "image": "https://avatars2.githubusercontent.com/u/61084213?s=460&u=63ce4d99e374d659fc5d4e3ab931892b1314cd05&v=4",
+      "github": "https://github.com/yuriy-ciber",
+      "comments": [],
+      "projects": []
+    }
+  ]
+}
