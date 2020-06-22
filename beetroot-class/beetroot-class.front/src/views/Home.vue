@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     ...mapState(["members"])
-  },
+  }
 };
 </script>
 <style lang="scss">
@@ -35,7 +35,12 @@ export default {
     flex-wrap: wrap;
   }
   &__card {
-    margin: 0 24px 32px;
+    margin: 0 0 32px;
+    width: 100%;
+    @include media($screen-tablet-small) {
+      margin: 0 24px 32px;
+      width: auto;
+    }
   }
 }
 </style>

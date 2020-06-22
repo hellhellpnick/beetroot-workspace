@@ -1,14 +1,20 @@
 <template>
   <div id="app" class="app">
     <the-header />
-    <router-view class="app__view" />
+    <transition
+      enter-active-class="animate__animated d-02 animate__fadeIn"
+      leave-active-class="animate__animated d-02 animate__fadeOut"
+      mode="out-in"
+    >
+      <router-view class="app__view" />
+    </transition>
   </div>
 </template>
 
 <script>
 import TheHeader from "./components/TheHeader";
 import { MEMBERS_REQUEST } from "./store";
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   name: "App",

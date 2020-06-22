@@ -1,13 +1,20 @@
 <template>
   <header class="header">
-    <h1 class="header__title">
-      <icon-beetroot fill="white" class="header__icon" />Beetroot Class
-    </h1>
+    <router-link to="/">
+      <h1 class="header__title">
+        <icon-beetroot fill="white" class="header__icon" />
+        <span class="header__title-text">Beetroot Class</span>
+      </h1>
+    </router-link>
     <div class="header__user" v-if="isAuth">
       <h3 class="header__username">{{user.name}}</h3>
       <b-button class="header__button" @click="logout">Log Out</b-button>
     </div>
-    <login-popover v-else-if="activeLogin && !isAuth" class="header__popover" />
+    <login-popover
+      @cancel="() => activeLogin = false"
+      v-else-if="activeLogin && !isAuth"
+      class="header__popover"
+    />
     <b-button v-else class="header__button" @click="activeLogin = true">Log In</b-button>
   </header>
 </template>
@@ -51,6 +58,12 @@ $style: header;
     @include flex(flex-start, center);
     @include text($H300, 400, $N00);
   }
+  &__title-text {
+    display: none;
+    @include media($screen-tablet) {
+      display: inline-block;
+    }
+  }
   &__icon {
     height: 44px;
     width: auto;
@@ -60,7 +73,11 @@ $style: header;
     @include flex(flex-start, center);
   }
   &__username {
+    @include text($H60, 400);
     margin-right: 12px;
+    @include media($screen-tablet-small) {
+      @include text($H200, 400);
+    }
   }
 }
 </style>

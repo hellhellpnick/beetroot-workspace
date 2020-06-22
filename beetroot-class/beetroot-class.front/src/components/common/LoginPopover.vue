@@ -16,7 +16,8 @@
         type="password"
       />
 
-      <b-button>{{authLoading ? 'loading...': 'Log In'}}</b-button>
+      <b-button class="login-popover__button">{{authLoading ? 'loading...': 'Log In'}}</b-button>
+      <b-button @click="$emit('cancel')" type='secondary'>Cancel</b-button>
     </form>
     <p class="login-popover__error">{{error}}</p>
   </div>
@@ -46,10 +47,28 @@ export default {
 </script>
 <style lang="scss">
 .login-popover {
-  &__form {
+  @include flex(flex-start, stretch, column);
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: $beetroot-light;
+  padding: 24px;
+  @include media($screen-tablet) {
     @include flex();
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+  &__form {
+    @include flex(flex-start, stretch, column);
+    flex-wrap: wrap;
     margin-bottom: 4px;
     position: relative;
+    @include media($screen-tablet) {
+      @include flex();
+    }
   }
   &__error {
     position: absolute;
@@ -57,12 +76,24 @@ export default {
     bottom: 7px;
   }
   &__input {
-    margin-right: 12px;
+    min-height: 30px;
+    margin-bottom: 12px;
     border-radius: 3px;
     outline: none;
     border: none;
     padding: 0 12px;
     font-size: 16px;
+    @include media($screen-tablet) {
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+  }
+  &__button {
+    margin-bottom: 12px;
+    @include media($screen-tablet) {
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
   }
 }
 </style>

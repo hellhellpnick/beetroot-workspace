@@ -6,7 +6,14 @@
       "image": "https://scontent.fhrk6-1.fna.fbcdn.net/v/t1.0-9/67815875_121275362522788_7135555758157987840_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=2_EvYpKjFT8AX8BUHPB&_nc_ht=scontent.fhrk6-1.fna&oh=5afa314435f1b808c2d0f66fd9c8d52c&oe=5F1240A1",
       "github": "https://github.com/mazurartem",
       "comments": [],
-      "projects": []
+      "projects": [
+        {
+          "id": "1592838787989",
+          "name": "Design Lab",
+          "link": "https://mazurartem.github.io/lab.github.io/",
+          "image": "https://i.ibb.co/YZkqVN4/Fire-Shot-Capture-007-WORKING-WITH-DESIGN-LAB-mazurartem-github-io.png"
+        }
+      ]
     },
     {
       "name": "Арутюн Матевосян ",
@@ -56,7 +63,8 @@
       "comments": [],
       "projects": [
         {
-          "name": "BHROMAON (Exam 1)",
+          "id": "1",
+          "name": "BHROMAON (Exam #1)",
           "image": "https://i.ibb.co/vPgrHQr/Fire-Shot-Capture-006-Exam-nikitaudav-github-io.png",
           "link": "https://nikitaudav.github.io/Exam_HTML/"
         }

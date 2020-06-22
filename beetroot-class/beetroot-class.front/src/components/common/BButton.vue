@@ -1,11 +1,17 @@
 <template>
-  <button @click="$emit('click')" class="button">
+  <button @click="$emit('click')" class="button" :class="type">
     <slot />
   </button>
 </template>
 <script>
 export default {
-  name: "BButton"
+  name: "BButton",
+  props: {
+    type: {
+      type: String,
+      default: "primary"
+    }
+  }
 };
 </script>
 <style lang="scss">
@@ -13,6 +19,7 @@ $style: button;
 .#{$style} {
   outline: none;
   border: none;
+  white-space: nowrap;
   @include flex(center, center);
   padding: 6px 32px;
   background-color: $beetroot-dark;
@@ -24,6 +31,9 @@ $style: button;
     &:hover {
       background-color: lighten($beetroot-dark, 5%);
     }
+  }
+  &.secondary {
+    background-color: $C600;
   }
   &:active {
     background-color: darken($beetroot-dark, 5%);

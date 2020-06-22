@@ -6,47 +6,26 @@
       <img v-if="!!member.image" class="member__photo" :src="member.image" alt />
     </header>
     <icon-beetroot-academy class="member__icon" />
-    <form v-if="isMyAuthAccount" class="member__form" @submit.prevent="onSubmit">
-      <input class="member__input" v-model="name" placeholder="Project Name" type="text" />
-      <input class="member__input" v-model="link" placeholder="Link" type="text" />
-      <input class="member__input" v-model="image" placeholder="Link to image" type="text" />
-      <b-button class="member__button">Add Project</b-button>
-    </form>
+    <member-form v-if="isMyAuthAccount" class="member__form" />
     <ul class="member__projects">
-      <li class="member__project" v-for="project in member.projects" :key="project.link">
+      <li class="member__project" v-for="project in member.projects" :key="project.id">
         <member-project :project="project" />
       </li>
     </ul>
   </main>
 </template>
 <script>
-import { mapGetters, mapState, mapActions } from "vuex";
+import { mapGetters, mapState } from "vuex";
 import MemberProject from "../components/common/MemberProject";
+import MemberForm from "../components/common/MemberForm";
 import IconBeetrootAcademy from "../components/icons/IconBeetrootAcademy";
-import { PROJECT_ADD } from "../store";
 
 export default {
   name: "Member",
   components: {
     MemberProject,
-    IconBeetrootAcademy
-  },
-  data() {
-    return {
-      name: "",
-      link: "",
-      image: ""
-    };
-  },
-  methods: {
-    ...mapActions([PROJECT_ADD]),
-    onSubmit() {
-      const { name, link, image } = this;
-      this[PROJECT_ADD]({
-        id: this.$route?.params?.id,
-        project: { name, link, image }
-      });
-    }
+    IconBeetrootAcademy,
+    MemberForm
   },
   computed: {
     ...mapState(["loading", "user"]),
@@ -71,10 +50,14 @@ export default {
     @include flex(flex-start, center, column);
   }
   &__photo {
-    width: 400px;
-    height: 400px;
-    object-fit: contain;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     margin-bottom: 40px;
+    @include media($screen-tablet-small) {
+      width: 400px;
+      object-fit: contain;
+    }
   }
   &__name {
     @include text($H300, 700);
@@ -82,22 +65,7 @@ export default {
   }
   &__form {
     align-self: center;
-    @include flex(flex-start, center, column);
-    width: 100%;
     margin-bottom: 40px;
-    @include media() {
-      width: 600px;
-    }
-  }
-  &__input {
-    margin-bottom: 20px;
-    width: 100%;
-    min-height: 32px;
-    padding: 0 12px;
-    font-size: 16px;
-    &:last-of-type {
-      margin-bottom: 32px;
-    }
   }
   &__icon {
     align-self: center;

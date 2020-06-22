@@ -24,7 +24,14 @@ export default {
   box-shadow: 0px 6px 30px -5px $d;
 }
 .member-card {
-  @include size(300px);
+  width: 100%;
+  height: 320px;
+  @include media($screen-tablet-small) {
+    @include size(220px);
+  }
+  @include media($screen-tablet) {
+    @include size(300px);
+  }
   border-radius: 4px;
   overflow: hidden;
   position: relative;

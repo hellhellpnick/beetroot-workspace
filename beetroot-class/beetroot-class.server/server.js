@@ -27,13 +27,11 @@ server.get('/api', (req, res) => {
 
 server.post('/api/login', (req, res) => {
   const { username, password } = req.body;
-  console.log(username);
   if (username && password) {
     const { members } = auth;
     const idx = members.findIndex(
       (item, idx) => item.id === username && item.password === password
     );
-    console.log(idx);
     if (idx >= 0) {
       const { [idx]: user } = members;
       const token = jwt.sign({ username, name: user.name }, JWT_SECRET, {});
@@ -53,10 +51,17 @@ server.post('/api/login', (req, res) => {
 server.use((req, res, next) => {
   const path = req && req.route && req.route.path;
   const method = req.method;
-  console.log(method, req.path);
-  if (req.url.includes('api') && method === 'POST') {
+  if (
+    req.url.includes('api') &&
+    ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method)
+  ) {
     try {
       req.user = jwt.verify(req.headers['authorization'], JWT_SECRET);
+      if (req.user.username !== req.path.split('/').pop()) {
+        return res.status(401).jsonp({
+          error: 'Unauthorized',
+        });
+      }
     } catch (err) {
       return res.status(401).jsonp({
         error: 'Unauthorized',

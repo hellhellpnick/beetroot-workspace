@@ -1,11 +1,26 @@
 import axios from 'axios';
+import { storage } from './storage';
+
+axios.interceptors.request.use(
+  (config) => {
+    const { headers } = config;
+    const token = storage.getToken();
+    if (token) {
+      headers.Authorization = token;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 const apiUrls = {
   local: 'http://localhost:9000/api',
-  prod: 'http://localhost:9000/api',
+  prod: 'https://beetroot-class-server.herokuapp.com/api',
 };
 
-export const API_URL = apiUrls['local'];
+export const API_URL = apiUrls['prod'];
 
 const url = {
   members: `${API_URL}/members`,

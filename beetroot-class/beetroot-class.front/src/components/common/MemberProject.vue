@@ -23,13 +23,13 @@ $style: project;
   position: relative;
   @include flex(flex-start);
   padding: 24px;
-  background-color: rgba(black, 0.4);
+  background: linear-gradient(45deg, rgba(black, 0.5), transparent);
   @include transition(all);
   @include media {
     &:hover {
-      background-color: transparent;
+      background: linear-gradient(45deg, rgba(black, 0.8), transparent);
       .#{$style}__name {
-        font-size: 22px;
+        font-size: 32px;
       }
     }
   }
@@ -43,7 +43,7 @@ $style: project;
   }
   &__name {
     @include transition(all);
-    @include text(32px, 400, $N0);
+    @include text(22px, 400, $N0);
   }
 }
 </style>

@@ -11,7 +11,7 @@ import {
   AUTH_LOGOUT,
   PROJECT_ADD,
 } from './types';
-import { http } from '../services';
+import { http, storage } from '../services';
 export * from './types';
 
 Vue.use(Vuex);
@@ -76,11 +76,13 @@ export default new Vuex.Store({
       try {
         const user = await http.login(payload);
         commit(AUTH_SET, user);
-        localStorage.setItem('user', JSON.stringify(user));
+        storage.setUser(user);
+        storage.setToken(user.token);
         commit(AUTH_SUCCESS);
       } catch (err) {
         commit(AUTH_FAILURE, err?.response?.data?.error);
-        localStorage.removeItem('user');
+        storage.deleteUser();
+        storage.deleteToken();
       }
     },
     async [PROJECT_ADD]({ dispatch, getters }, { id, project }) {
@@ -93,7 +95,8 @@ export default new Vuex.Store({
     },
     async [AUTH_LOGOUT]({ commit }) {
       commit(AUTH_LOGOUT);
-      localStorage.removeItem('user');
+      storage.deleteToken();
+      storage.deleteUser();
     },
   },
   getters: {
